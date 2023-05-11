@@ -29,12 +29,10 @@ public class ProjectCalculator {
             default:
                 throw new Exception("Строка не является математической операцией");
         }
-        if(a>10){
-            throw new Exception("Цифра выше 10!");
+        if(a < 1 || a > 10 || b < 1 || b > 10){
+            throw new Exception("Введите цифры от 1 до 10!");
         }
-        if(b>10){
-            throw new Exception("Цифра выше 10!");
-        }
+       
         return Integer.toString(result);
     }
 
